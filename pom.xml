@@ -55,12 +55,14 @@
             <configuration>
               <group>Application/Development</group>
               <prefix>/opt</prefix>
-              <needarch>x86_64</needarch>
+              <defineStatements>
+                <defineStatement>_binaries_in_noarch_packages_terminate_build 0</defineStatement>
+              </defineStatements>
               <name>apache-maven</name>
               <mappings>
                 <mapping>
-                  <directory>/opt/</directory>
-                  <filemode>440</filemode>
+                  <directory>/opt/apache-maven</directory>
+                  <filemode>750</filemode>
                   <username>root</username>
                   <groupname>root</groupname>
                   <sources>
@@ -70,6 +72,9 @@
                   </sources>
                 </mapping>
               </mappings>
+              <postinstallScriptlet>
+                <script>rm -f /opt/apache-maven/latest; ln -sfn /opt/apache-maven/apache-maven-${version} /opt/apache-maven/latest</script>
+              </postinstallScriptlet>
             </configuration>
         </plugin>
      </plugins>
