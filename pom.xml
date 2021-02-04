@@ -5,7 +5,6 @@
     <artifactId>create-maven-rpm</artifactId>
     <version>3.6.3</version>
     <packaging>jar</packaging>
-    <name>apache-maven</name>
     <dependencies>
         <dependency>
             <groupId>org.apache.maven</groupId>
@@ -56,6 +55,8 @@
             <configuration>
               <group>Application/Development</group>
               <prefix>/opt</prefix>
+              <needarch>x86_64</needarch>
+              <name>apache-maven</name>
               <mappings>
                 <mapping>
                   <directory>/opt/</directory>
