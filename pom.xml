@@ -63,7 +63,7 @@
               <mappings>
                 <mapping>
                   <directory>/opt/apache-maven</directory>
-                  <filemode>750</filemode>
+                  <filemode>655</filemode>
                   <username>root</username>
                   <groupname>root</groupname>
                   <sources>
