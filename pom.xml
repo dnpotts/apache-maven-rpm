@@ -59,6 +59,7 @@
                 <defineStatement>_binaries_in_noarch_packages_terminate_build 0</defineStatement>
               </defineStatements>
               <name>apache-maven</name>
+               <autoRequires>false</autoRequires>
               <mappings>
                 <mapping>
                   <directory>/opt/apache-maven</directory>
